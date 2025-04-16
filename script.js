@@ -186,47 +186,44 @@ window.addEventListener("click", (e) => {
     }
 });
 
-// Download CV functionality
-downloadCV.addEventListener("click", (e) => {
+// Update the CV download functionality
+downloadCV.addEventListener('click', function(e) {
     e.preventDefault();
-    // Replace with actual CV file path
-    const cvPath = "path/to/your/cv.pdf";
-    window.open(cvPath, "_blank");
+    
+    // Google Drive file URL and ID
+    const fileId = '1i5JrOcjsrEpBj9tZJh0zxnqbE4vEivUv';
+    
+    // Direct Google Drive viewing URL
+    const viewUrl = `https://drive.google.com/file/d/${fileId}/view?usp=sharing`;
+    
+    // Open CV in new tab
+    window.open(viewUrl, '_blank');
 });
 
-// Add animation on scroll
-const observerOptions = {
-    root: null,
-    threshold: 0.1,
-    rootMargin: "0px"
-};
-
+// Combine observers
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
+            if (entry.target.classList.contains('skill-progress')) {
+                // Skill progress animation
+                const progress = entry.target;
+                const targetWidth = progress.style.width;
+                progress.style.width = "0";
+                setTimeout(() => {
+                    progress.style.width = targetWidth;
+                }, 100);
+            } else {
+                // Regular animation
+                entry.target.classList.add("animate");
+            }
         }
     });
-}, observerOptions);
-
-document.querySelectorAll(".animate-text, .skill-item, .project-card, .achievement-card").forEach(element => {
-    observer.observe(element);
+}, {
+    root: null,
+    threshold: 0.1,
+    rootMargin: "0px"
 });
 
-// Skill progress animation
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const progress = entry.target;
-            const targetWidth = progress.style.width;
-            progress.style.width = "0";
-            setTimeout(() => {
-                progress.style.width = targetWidth;
-            }, 100);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll(".skill-progress").forEach(progress => {
-    skillObserver.observe(progress);
+document.querySelectorAll(".animate-text, .skill-item, .project-card, .achievement-card, .skill-progress").forEach(element => {
+    observer.observe(element);
 });
