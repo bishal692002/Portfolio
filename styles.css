@@ -131,6 +131,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    transition: var(--transition);
 }
 
 .hero-social a {
@@ -255,6 +256,7 @@ nav {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     overflow: hidden;
+    transition: var(--transition);
 }
 
 .project-img img {
@@ -466,10 +468,6 @@ footer {
 @media (max-width: 1024px) {
     html {
         font-size: 60%;
-    }
-
-    .container {
-        padding: 0 3rem;
     }
 }
 
