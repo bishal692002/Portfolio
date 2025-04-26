@@ -45,7 +45,7 @@
                 <div class="hero-text">
                     <h1 class="animate-text">Hi, I'm <span>Bishal Biswas</span></h1>
                     <h2 class="animate-text">Aspiring Software Developer</h2>
-                    <p class="animate-text">Full-stack Web Development | Data Handling | System Optimization</p>
+                    <p class="animate-text">Full-stack Web Development | Tech Enthusiast</p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn primary-btn">Get In Touch</a>
                         <a href="#projects" class="btn secondary-btn">View Projects</a>
@@ -191,6 +191,13 @@
                                 <div class="skill-progress" style="width: 85%;"></div>
                             </div>
                         </div>
+                        <div class="skill-item" data-skill="React">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <h4>React</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 35%;"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -202,6 +209,13 @@
                             <h4>MySQL</h4>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="MongoDB">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h4>MongoDB </h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 30%;"></div>
                             </div>
                         </div>
                     </div>
@@ -336,58 +350,114 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://via.placeholder.com/600x400" alt="EduAdminPro">
-                    </div>
                     <div class="project-content">
-                        <h3>EduAdminPro</h3>
-                        <p>An educational administration platform that automates admission processes, improves user interface efficiency, and optimizes database performance.</p>
+                        <h3>Todo App</h3>
+                        <p>A full-stack todo application with CRUD operations, request validation, and MongoDB integration.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Zod</span>
+                            <span class="tech-tag">Mongoose</span>
                         </div>
                         <div class="project-highlights">
                             <ul>
-                                <li>Reduced processing time by 40%</li>
-                                <li>Increased applicant satisfaction by 20%</li>
-                                <li>Improved interaction efficiency by 30%</li>
-                                <li>Cut form submission time by 35%</li>
+                                <li>Backend with Express.js and MongoDB</li>
+                                <li>Frontend using React with Vite</li>
+                                <li>Request validation using Zod</li>
+                                <li>Clean project structure and documentation</li>
                             </ul>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn project-btn"><i class="fas fa-link"></i> View Project</a>
-                            <a href="#" class="btn project-btn"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://github.com/bishal692002/basic-todo" class="btn project-btn" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://via.placeholder.com/600x400" alt="Weather Forecast Application">
-                    </div>
                     <div class="project-content">
-                        <h3>Weather Forecast Application</h3>
-                        <p>A responsive weather application that provides real-time weather data including temperature, humidity, and wind information for any searched location.</p>
+                        <h3>Leetmetrics</h3>
+                        <p>A web application that provides detailed analysis of LeetCode profiles and performance metrics.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Tailwind CSS</span>
                             <span class="tech-tag">API Integration</span>
                         </div>
                         <div class="project-highlights">
                             <ul>
-                                <li>Real-time weather data retrieval</li>
-                                <li>Search functionality for any location</li>
-                                <li>Dark/light theme toggle</li>
-                                <li>Responsive design for all devices</li>
+                                <li>User profile statistics and ranking</li>
+                                <li>Problem-solving progress tracking</li>
+                                <li>Difficulty-wise problem analysis</li>
+                                <li>Daily practice recommendations</li>
                             </ul>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/bishal692002/WeatherApp" class="btn project-btn"><i class="fas fa-link"></i> View Project</a>
-                            <a href="https://github.com/bishal692002/WeatherApp" class="btn project-btn"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://bishal692002.github.io/Leetmetrics/" class="btn project-btn" target="_blank">
+                                <i class="fas fa-link"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/bishal692002/Leetmetrics" class="btn project-btn" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Weather App</h3>
+                        <p>A web application that provides real-time weather information using the OpenWeatherMap API. Users can search for weather conditions by city name.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>Real-time weather data fetching</li>
+                                <li>Dynamic weather icon updates</li>
+                                <li>Responsive design for all devices</li>
+                                <li>Clean and intuitive user interface</li>
+                            </ul>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://bishal692002.github.io/WeatherApp/" class="btn project-btn" target="_blank">
+                                <i class="fas fa-link"></i> Live Demo
+                            <a href="https://github.com/bishal692002/WeatherApp" class="btn project-btn" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                                
+                                
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>LinkedIn Clone</h3>
+                        <p>A responsive LinkedIn interface clone built with pure HTML and CSS, demonstrating advanced CSS skills.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>Pixel-perfect UI recreation</li>
+                                <li>Responsive design</li>
+                                <li>Modern CSS practices</li>
+                                <li>Clean and semantic HTML</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://bishal692002.github.io/LinkedIn-clone/" class="btn project-btn" target="_blank">
+                                <i class="fas fa-link"></i> Live Demo
+                            <a href="https://github.com/bishal692002/LinkedIn-clone" class="btn project-btn" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -454,74 +524,56 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Location</h3>
-                            <p>Kolkata, India</p>
-                        </div>
+    <div class="container">
+        <div class="section-title">
+            <h2>Connect With Me</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="contact-content">
+            <div class="connect-grid">
+                <!-- Email -->
+                <div class="connect-item">
+                    <div class="connect-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>bishal692002@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Phone</h3>
-                            <p>9531632450</p>
-                        </div>
-                    </div>
-                    <div class="contact-social">
-                        <h3>Connect With Me</h3>
-                        <div class="social-icons">
-                            <a href="https://linkedin.com/in/bishal2002" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/bishal692002" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://leetcode.com/bishal2002" target="_blank"><i class="fas fa-code"></i></a>
-                        </div>
-                    </div>
+                    <h3>Email</h3>
+                    <p>bishal692002@gmail.com</p>
+                    <a href="mailto:bishal692002@gmail.com" class="btn primary-btn">Send Email</a>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="input-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            <span class="error-message" id="name-error"></span>
-                        </div>
-                        <div class="input-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            <span class="error-message" id="email-error"></span>
-                        </div>
-                        <div class="input-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                            <span class="error-message" id="subject-error"></span>
-                        </div>
-                        <div class="input-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                            <span class="error-message" id="message-error"></span>
-                        </div>
-                        <button type="submit" class="btn primary-btn">Send Message</button>
-                        <div id="form-response" class="form-response"></div>
-                    </form>
+                
+                <!-- LinkedIn -->
+                <div class="connect-item">
+                    <div class="connect-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Let's connect professionally</p>
+                    <a href="https://linkedin.com/in/bishal2002" target="_blank" class="btn primary-btn">Connect on LinkedIn</a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="connect-item">
+                    <div class="connect-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Check out my projects</p>
+                    <a href="https://github.com/bishal692002" target="_blank" class="btn primary-btn">Follow on GitHub</a>
+                </div>
+
+                <!-- LeetCode -->
+                <div class="connect-item">
+                    <div class="connect-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>LeetCode</h3>
+                    <p>View my problem-solving skills</p>
+                    <a href="https://leetcode.com/bishal2002" target="_blank" class="btn primary-btn">Visit LeetCode</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>

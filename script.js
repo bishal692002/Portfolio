@@ -4,11 +4,13 @@ const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".nav-links");
 const navItems = document.querySelectorAll(".nav-links li");
 const backToTopButton = document.getElementById("back-to-top");
-const contactForm = document.getElementById("contactForm");
-const successModal = document.getElementById("successModal");
-const closeModal = document.querySelector(".close-modal");
-const modalBtn = document.querySelector(".modal-btn");
 const downloadCV = document.getElementById("download-cv");
+
+// Add theme toggle button
+const themeToggle = document.createElement('button');
+themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+themeToggle.classList.add('theme-toggle');
+document.querySelector('header .container').appendChild(themeToggle);
 
 // Preloader
 window.addEventListener("load", () => {
@@ -105,87 +107,6 @@ backToTopButton.addEventListener("click", () => {
     });
 });
 
-// Form Validation and Submission
-contactForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    
-    // Reset error messages
-    document.querySelectorAll(".error-message").forEach(error => {
-        error.textContent = "";
-    });
-
-    // Get form data
-    const formData = new FormData(contactForm);
-    const formProps = Object.fromEntries(formData);
-
-    // Validate form data
-    let isValid = true;
-    const errors = {};
-
-    // Name validation
-    if (formProps.name.length < 2) {
-        errors.name = "Name must be at least 2 characters long";
-        isValid = false;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formProps.email)) {
-        errors.email = "Please enter a valid email address";
-        isValid = false;
-    }
-
-    // Subject validation
-    if (formProps.subject.length < 3) {
-        errors.subject = "Subject must be at least 3 characters long";
-        isValid = false;
-    }
-
-    // Message validation
-    if (formProps.message.length < 10) {
-        errors.message = "Message must be at least 10 characters long";
-        isValid = false;
-    }
-
-    // Display errors if any
-    if (!isValid) {
-        for (const [key, value] of Object.entries(errors)) {
-            document.getElementById(`${key}-error`).textContent = value;
-        }
-        return;
-    }
-
-    // Form submission simulation
-    try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Show success modal
-        successModal.style.display = "block";
-        
-        // Reset form
-        contactForm.reset();
-        
-    } catch (error) {
-        document.getElementById("form-response").innerHTML = 
-            `<p class="error">Sorry, there was an error. Please try again later.</p>`;
-    }
-});
-
-// Modal Controls
-function closeModalHandler() {
-    successModal.style.display = "none";
-}
-
-closeModal.addEventListener("click", closeModalHandler);
-modalBtn.addEventListener("click", closeModalHandler);
-
-window.addEventListener("click", (e) => {
-    if (e.target === successModal) {
-        closeModalHandler();
-    }
-});
-
 // Update the CV download functionality
 downloadCV.addEventListener('click', function(e) {
     e.preventDefault();
@@ -227,3 +148,18 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".animate-text, .skill-item, .project-card, .achievement-card, .skill-progress").forEach(element => {
     observer.observe(element);
 });
+
+// Theme Toggle
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    themeToggle.innerHTML = document.body.classList.contains('dark-theme') ? 
+        '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+});
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
